@@ -1,5 +1,5 @@
 class AddFkToPayments < ActiveRecord::Migration[7.0]
   def change
-    add_foreign_key :payments, :orders, column: :order_id
+    add_reference :payments, :order, foreign_key: true
   end
 end
