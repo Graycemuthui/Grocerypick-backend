@@ -1,23 +1,17 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: %i[show edit update destroy]
-
-  # GET /products or /products.json
   def index
     @products = Product.all
   end
 
-  # GET /products/1 or /products/1.json
   def show
     @product = Product.find(params[:id])
     render json: @product
   end
 
-  # GET /products/new
   def new
     @product = Product.new
   end
 
-  # POST /products or /products.json
   def create
     @product = Product.new(product_params)
 
@@ -28,19 +22,15 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /products/1 or /products/1.json
   def update
-    respond_to do |_format|
-      @product = Product.find(params[:id])
-      if @product.update(product_params)
-        render json: @product
-      else
-        render json: @product.errors, status: :unprocessable_entity
-      end
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      render json: @product
+    else
+      render json: @product.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /products/1 or /products/1.json
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
@@ -48,8 +38,8 @@ class ProductsController < ApplicationController
 
   private
 
-  # Only allow a list of trusted parameters through.
   def product_params
-    params.fetch(:product, {})
+    params.require(:product).permit(:product_name, :product_description, :product_price, :product_quantity, :product_image,
+                                    :category_id)
   end
 end
