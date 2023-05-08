@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  protect_from_forgery unless: -> { request.format.json? }
+  skip_before_action :authorized, only: %i[create]
 
   def create
     user = User.new(user_params)
