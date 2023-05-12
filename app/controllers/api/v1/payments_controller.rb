@@ -1,6 +1,10 @@
 class Api::V1::PaymentsController < ApplicationController
+  skip_before_action :authorized
+  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+
   def index
     @payments = Payment.all
+    render json: @payments
   end
 
   def show

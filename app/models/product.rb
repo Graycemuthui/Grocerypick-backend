@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  belongs_to :category
+  belongs_to :category, optional: true
   has_many :orders
   validates :product_name, presence: true
   validates :product_price, presence: true

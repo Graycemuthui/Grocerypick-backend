@@ -1,6 +1,10 @@
 class Api::V1::OrdersController < ApplicationController
+  skip_before_action :authorized
+  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+
   def index
     @orders = Order.all
+    render json: @orders
   end
 
   def show

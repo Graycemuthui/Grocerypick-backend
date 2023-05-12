@@ -1,6 +1,10 @@
 class Api::V1::ProductsController < ApplicationController
+  skip_before_action :authorized
+  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+
   def index
     @products = Product.all
+    render json: @products
   end
 
   def show
@@ -10,6 +14,7 @@ class Api::V1::ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    render
   end
 
   def create
