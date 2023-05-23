@@ -13,14 +13,15 @@ class Api::V1::CategoriesController < ApplicationController
   end
 
   def new
-    @category = Category.new
+    puts params.inspect
+    @category = Category.new(category_params)
   end
 
   def create
     @category = Category.new(category_params)
 
     if @category.save
-      render json: @category, status: :created, location: @category
+      render json: @category, status: :created
     else
       render json: @category.errors, status: :unprocessable_entity
     end
@@ -43,6 +44,6 @@ class Api::V1::CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:category_name)
+    params.require(:category).permit(:category_name, :category_image)
   end
 end

@@ -83,14 +83,17 @@ product = Product.create!([
                               product_description: 'Orange juice is packed with many nutritional benefits like carbohydrates, proteins, fibres, and minerals like iron, calcium, zinc, and sodium. Vitamins such as vitamins A, C, and B are also present in orange juice. Drinking orange juice might also help with conditions such as heart diseases, obesity, and cancer.', product_price: 150, product_quantity: '1L', product_image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b3JhbmdlJTIwanVpY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60' }
                           ])
 
-category = Category.create!([{ category_name: 'Fruits', category_image: 'https://images.unsplash.com/photo-1573246123716-6b1782bfc499?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZydWl0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60' },
-                             { category_name: 'Vegetables',
-                               category_image: 'https://images.unsplash.com/photo-1597362925123-77861d3fbac7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmVnZXRhYmxlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60' },
-                             { category_name: 'Meat',
-                               category_image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60' },
-                             { category_name: 'Juice',
-                               category_image: 'https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZydWl0JTIwanVpY2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60' },
-                             { category_name: 'Dairy',
-                               category_image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFpcnklMjBwcm9kdWN0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60' },
-                             { category_name: 'Fish',
-                               category_image: 'https://images.unsplash.com/photo-1674702420304-cd0b86416c47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=400&q=60' }])
+category = Category.create!([
+                              { category_name: 'Fruits',
+                                category_image: 'https://images.unsplash.com/photo-1573246123716-6b1782bfc499?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZydWl0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60' },
+                              { category_name: 'Vegetables',
+                                category_image: 'https://images.unsplash.com/photo-1597362925123-77861d3fbac7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmVnZXRhYmxlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60' },
+                              { category_name: 'Meat',
+                                category_image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVhdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60' },
+                              { category_name: 'Juice',
+                                category_image: 'https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZydWl0JTIwanVpY2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60' },
+                              { category_name: 'Dairy',
+                                category_image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFpcnklMjBwcm9kdWN0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60' },
+                              { category_name: 'Fish',
+                                category_image: 'https://images.unsplash.com/photo-1674702420304-cd0b86416c47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=400&q=60' }
+                            ])
