@@ -13,7 +13,6 @@ class Api::V1::CategoriesController < ApplicationController
   end
 
   def new
-    puts params.inspect
     @category = Category.new(category_params)
   end
 

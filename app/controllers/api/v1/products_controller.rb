@@ -14,7 +14,6 @@ class Api::V1::ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    render
   end
 
   def create
@@ -44,7 +43,7 @@ class Api::V1::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:product_name, :product_description, :product_price, :product_quantity, :product_image,
-                                    :category_id)
+    params.require(:product).permit(:product_name, :product_description, :product_price, :product_quantity,
+                                    :product_image, :category_id)
   end
 end

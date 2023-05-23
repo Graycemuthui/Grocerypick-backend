@@ -6,5 +6,5 @@ class Product < ApplicationRecord
   validates :product_description, presence: true
   validates :product_image, presence: true
   validates :product_quantity, presence: true
-  validates :category_id, presence: true
+  validates :category, presence: true
 end
