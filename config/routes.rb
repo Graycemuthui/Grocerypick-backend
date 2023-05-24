@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categoryproducts
   namespace :api do
     namespace :v1 do
       resources :customers
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
       resources :categories
       resources :orders
       resources :products
+      resources :categoryproducts
       resources :users, only: [:create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
