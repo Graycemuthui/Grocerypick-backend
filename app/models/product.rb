@@ -2,6 +2,7 @@ class Product < ApplicationRecord
   has_many :orders
   has_many :categories, through: :category_products
   has_many :category_products
+  attribute :category, :string
   validates :product_name, presence: true
   validates :product_price, presence: true
   validates :product_description, presence: true
